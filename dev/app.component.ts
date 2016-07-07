@@ -6,7 +6,9 @@ import {Component} from '@angular/core';
         {{name}}
         <br>
         {{onTest()}}
-        <input type="text" value="{{name}}">
+        <input type="text" [value]="name" class="{{'red'}}">
+        
+        <input type="text" [value]="name" [ngClass]="{red: true}" [disabled]="1 === 1">
        
     `,
 })
