@@ -1,0 +1,31 @@
+# Ignore hidden folders #
+# This takes care of .tmp, .sass-cache, and many others #
+.elasticbeanstalk
+
+# Ignore OS generated files #
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Always-ignore files and folders #
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swn
+*.swo
+*.swp
+._*
+*~
+.idea
+bower_components
+node_modules
+build
+dist
+dist.zip
+deploy/*.tar
+deploy/*.tar.gz
+app
+src
