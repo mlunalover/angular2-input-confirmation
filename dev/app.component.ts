@@ -1,28 +1,19 @@
 import {Component} from '@angular/core';
-import {PropertyBindingComponent} from "./property-binding.component";
+import {InputComponent} from "./bindings/input.component";
 
 @Component({
     selector: 'app',
     template: `
-        <section class="parent">
-            <h2>This is the parent component</h2>
-            <h4>Please enter your name</h4>
-            <input type="text" [(ngModel)]="name">
-            <br><br>
-            <p>{{name}}</p>
-            
-            <section class="child">
-                <my-property-binding [myName]="name" [myAge]="27" (hobbiesChanged)="hobbies = $event"></my-property-binding>
-            </section>
-            
-            <p>My hobbies are: {{hobbies}}</p>
-            
-        </section>
-        
-    `,
-    directives: [PropertyBindingComponent]
+        <div class="container">
+            <my-input></my-input>
+        </div>
+        <div class="container">
+            ...
+        </div>
+    `
+    directives: [InputComponent]
 })
 export class AppComponent {
-    name = '';
-    hobbies = '';
+    myself = {name: '', age: ''};
+    confirmedMyself = {name: '', age: ''};
 }
