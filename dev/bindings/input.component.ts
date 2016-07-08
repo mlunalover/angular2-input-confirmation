@@ -19,7 +19,8 @@ import {EventEmitter} from "@angular/router/src/facade/async";
         <br>
         <button [disabled]="!isValid" (click)="onSubmit()">Submit</button>
     `,
-    output: ['submitted']
+    inputs: ['myself'],
+    outputs: ['submitted']
 })
 
 export class InputComponent {
